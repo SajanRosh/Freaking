@@ -7,10 +7,14 @@ builder.Services.AddOpenApi();
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowFrontend",
-        policy => policy.WithOrigins("http://localhost:3000")
-                        .AllowAnyMethod()
-                        .AllowAnyHeader());
+        policy => policy.WithOrigins(
+                "http://localhost:3000", // for local development
+                "https://thankful-hill-0e89c9a0f.3.azurestaticapps.net" // deployed frontend
+            )
+            .AllowAnyMethod()
+            .AllowAnyHeader());
 });
+
 builder.Services.AddControllers();
 var app = builder.Build();
 
