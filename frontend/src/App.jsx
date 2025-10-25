@@ -3,9 +3,9 @@ import { useEffect } from 'react';
 import axios from 'axios'
 
 function App() {
-  const url = "freakingrollins-emgagta0fcbfe6fh.canadacentral-01.azurewebsites.net";
+  const apiurl = "https://freakingrollins-emgagta0fcbfe6fh.canadacentral-01.azurewebsites.net"
   useEffect(() =>{
-    axios.get(`${url}/weatherforecast`).then(res => {
+    axios.get(`${apiurl}/weatherforecast`).then(res => {
       console.log(res.data)
     })
   }, [])
