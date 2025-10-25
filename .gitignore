@@ -1,0 +1,10 @@
+# React
+frontend/node_modules
+frontend/build
+
+# .NET
+api/bin/
+api/obj/
+
+# Misc
+.vscode/
